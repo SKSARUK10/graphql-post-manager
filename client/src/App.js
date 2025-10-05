@@ -15,10 +15,12 @@ export default function App() {
           GraphQL Posts App
         </h1>
         <div className="max-w-3xl mx-auto space-y-6">
-          <PostForm />
           <div className="flex flex-col md:flex-row md:space-x-6 space-y-4 md:space-y-0">
             <div className="md:w-1/3">
               <UserList onSelectUser={setFilterUserId} />
+            </div>
+            <div className="md:w-2/3">
+              <PostForm selectedUserId={filterUserId} />
             </div>
             <div className="md:w-2/3">
               <PostList filterUserId={filterUserId} />
